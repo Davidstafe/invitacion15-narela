@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #1404f4, #688bea);
+  color: #333;
+  text-align: center;
+}
+
+/* PORTADA */
+.hero {
+  min-height: 100vh;
+  background: #f403c8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* INFO EVENTO */
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #b52727;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* DRESS CODE */
+.dresscode {
+  background: #eee;
+  padding: 40px 20px;
+}
+
+.dresscode h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+/* CONFIRMACIÓN */
+.confirmacion {
+  padding: 40px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 30px;
+  background: #c27ba0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #a85f86;
+}
+
+/* CIERRE */
+footer {
+  padding: 30px 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
