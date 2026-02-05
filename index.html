@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Narela Poldi . Mis 15 años</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="img.js">
 </head>
 <body>
 
     <!--PORTADA-->
     <header class="hero">
       <div class="hero-text">
-
-    
         <h1 class="name">Mis 15 años</h1>
         <h2>Una celebración de mi vida</h2>
         </div>
     </header>
+    <!-- MÚSICA -->
+    <article class="card">
+      <h3>Música</h3>
+      <p>Tocá Play para musicalizar la invitación.</p>
+
+      <div class="music-controls">
+        <audio id="bgMusic" loop>
+          <source src="musica/martaAlbarracin.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+
+        <button class="btn outline" id="playMusic">▶ Play</button>
+      </div>
   <!-- COUNTDOWN -->
   <section class="countdown-section">
     <h2>Falta muy poco</h2>
@@ -40,9 +53,18 @@
     <h3>Salon Olimpus</h3>
 
     <p>Mendoza 3599 </p>
+    <a class="btn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/place/Olimpus+espacio+de+fiestas/@-31.646037,-60.7225783,631m/data=!3m2!1e3!4b1!4m6!3m5!1s0x95b5a9b33c65c6e3:0xeee09041c5a2f13e!8m2!3d-31.646037!4d-60.7200034!16s%2Fg%2F1hc5trrvs?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D">
+         Ver en Google Maps
+      </a>
     </div>
    
-
+<!-- FOTO CUUMPLEAÑERA-->
+    <article class="card">
+     <div class="card-img-wrapper">
+     <img src="imagen/fotoSofi.jpeg" alt="Foto" class="card-img">
+    </div>
+    </article>
     <!-- CONFIRMACIÓN -->
 
   <section class="info">
@@ -62,8 +84,10 @@
   <section class="confirmacion">
     <p>Confirmá tu asistencia</p>
     <a href="https://wa.me/+5493425684248" target="_blank" class="btn">
-      Confirmar por WhatsApp
-      
+      Confirmar por WhatsApp y Enviar comprobante
+      <div class="whatsapp-icon">
+        <a href="https://wa.me/+5493425684248" target="_blank" class="btn">
+          <img src="imagen/whatsapp-icon.png" alt="WhatsApp" class="icon">  
   </div>
     </a>
   </section>
