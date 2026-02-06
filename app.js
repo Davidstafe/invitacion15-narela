@@ -29,12 +29,28 @@ function startCountdown() {
   setInterval(update, 1000);
 }
 
-startCountdown();
+
+const imgWrapper = document.querySelector('.card-img-wrapper');
+
+if (imgWrapper) {
+  const imgObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        imgObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  imgObserver.observe(imgWrapper);
+}
 
 
 // ===== TODO LO DEMÁS DESPUÉS QUE CARGA EL DOM =====
 document.addEventListener("DOMContentLoaded", () => {
-
+startCountdown();
   // === COPIAR ALIAS ===
   const copyBtn = document.getElementById("copyAlias");
   if (copyBtn) {
@@ -71,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     confirmBtn.addEventListener("click", (e) => {
       e.preventDefault();
       const text = encodeURIComponent(
-        "Hola! Confirmo asistencia a los 15 de Sofía Belén Ruiz Moreno. Mi nombre es: "
+        "Hola! Confirmo asistencia a los 15 de Narela Poldi. Mi nombre es: "
       );
       window.open(`https://wa.me/?text=${text}`, "_blank");
     });
@@ -103,8 +119,11 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+}
+
     }
-  });
+  );
 }, {
   threshold: 0.15
 });
