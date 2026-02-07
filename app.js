@@ -177,4 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   cards.forEach(card => observer.observe(card));
 });
+window.addEventListener("load", () => {
+  document.querySelector(".hero-text").classList.add("visible");
+});
 
