@@ -15,43 +15,27 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background:
-      url("img/décimo-quinto-invitación-de-quinceanera-del-cumpleaños-6391433.png");
+      url("img/fondo.pngs");
     background-repeat: repeat-y;
     background-position: center top;
     background-size: auto;
     color: #2b2630;
 }
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.35);
-  z-index: -1;
-}
+
 
 
 /* ===== HERO con imagen de fondo ===== */
-.hero{
+.hero {
   position: relative;
   height: 75vh;
   max-height: 600px;
-  background-image: url('img/El\ texto\ del\ párrafo.png');
+  background-image: url("img/portada.png");
   background-size: cover;
-  background-position: center 55%; /* CLAVE */
+  background-position: center top;
   background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.hero::before {
-  content: "";
-  z-index: 1;
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-}
+
 .hero-name.framed{
   font-family: 'Playfair Display', serif;
   font-size: 3.4rem;
