@@ -28,7 +28,7 @@
 .hero {
   position: relative;
   height: 75vh;
-  max-height: 600px;
+  min-height: 400px;
   background-image: url("img/portada.png");
   background-size: cover;
   background-position: center top;
@@ -110,7 +110,32 @@
 .unit small{display:block;margin-top:6px;color:#444}
 
 /* info */
-.info{max-width:980px;margin:20px auto;padding:0 16px}
+.info {
+  max-width: 980px;
+  margin: 20px auto;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  inset: -60px 0;
+  background: url("img/fondo.png") repeat-y center top;
+  background-size: auto;
+  z-index: -1;
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  inset: -60px 0;
+  background: url("img/marco-quince.png") repeat-y center top;
+  background-size: auto;
+  z-index: -1;
+  opacity: 0.35;
+}
 
 .card {
   
@@ -197,6 +222,26 @@
   border:none;
   cursor:pointer;
 }
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #25d62b, #2f80ed);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-google:hover {
+  background: linear-gradient(90deg, #1fa851, #2563eb); /* más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
 .btn-whatsapp{
   display:inline-flex;
   gap:8px;
@@ -210,6 +255,7 @@
   border-radius:12px;
 }
 .btn-whatsapp:hover{
+   background: linear-gradient(90deg, #02e756, #004d1d); /* más oscuro */
    transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(0,0,0,0.25);
 }
@@ -251,7 +297,11 @@
 .footer p {
   margin: 6px 0;
 }
-
+@media (min-width: 1400px) {
+  .hero {
+    height: 90vh;
+  }
+}
 @media (min-width: 1200px) {
   .hero {
     height: 65vh;
